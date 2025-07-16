@@ -1,0 +1,26 @@
+import { useEffect, useContext  } from 'react';
+import { Navigate } from 'react-router-dom';
+
+import UserContext from '../context/UserContext';
+
+export default function Logout() {
+
+    console.log("test");
+
+    const { setUser, unsetUser } = useContext(UserContext);
+
+    unsetUser();
+
+    useEffect(() => {
+        unsetUser();
+        setUser({
+            id: null,
+            isAdmin: null
+        });
+    }, [])
+
+    return (
+        <Navigate to='/' />
+    )
+
+}
