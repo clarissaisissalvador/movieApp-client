@@ -11,3 +11,159 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* CSS Rule */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* Landing Page */
+
+.custom-navbar{
+  background-color: #070e16;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.landing-hero {
+  background-color: #070e16;
+  color: white;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+.titles {
+  font-size: 3rem;
+  font-weight: bold;
+}
+#btn1, #btn2 {
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 30px;
+}
+#btn1 {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+#btn2 {
+  background-color: #e50914;
+  color: white;
+  border: none;
+}
+#btn2:hover {
+  background-color: #bf0811;
+}
+
+/* Landing Page */
+
+
+/* Footer Page */
+.footer-bg blockquote {
+  border-left: 4px solid red;
+  padding-left: 1rem;
+}
+/* Footer Page */
+
+/* Login Page */
+
+/* Login buttons */
+#login{
+  background-color: #070e16;
+}
+.title-red{
+  color: #e50914;
+}
+#loginBtn1, #loginBtn2 {
+  background-color: #e50914;
+  border: none;
+  color: #070e16;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+#loginBtn1:hover {
+  background-color: #bf0811;
+  color: #ffffff;
+}
+
+#loginBtn2:disabled {
+  background-color: #bf0811;
+  color: #aaa;
+}
+
+/* Sign Up link */
+
+.signup {
+  color: #e50914;
+}
+
+.signup:hover {
+  color: #bf0811;
+}
+
+/* Login Page */
+
+
+/* Register Page */
+#register{
+  background-color: #070e16;
+}
+.form-p{
+  margin-top: 50px;
+}
+
+#submitBtn, #submitBtn2 {
+  background-color: #e50914;
+  border: none;
+  color: #070e16;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover {
+  background-color: #bf0811;
+  color: #ffffff;
+}
+
+#submitBtn2:disabled {
+  background-color: #bf0811;
+  color: #aaa;
+}
+
+/* Sign Up link */
+
+.login-link {
+  color: #e50914;
+}
+
+.login-link:hover {
+  color: #bf0811;
+}
+/* Register Page */
+
+
+/* Movies Page */
+#sendBtn{
+  background-color: #e50914;
+  border: none;
+  color: #070e16;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#sendBtn:hover {
+  background-color: #bf0811;
+  color: #ffffff;
+}
+/* Movies Page */

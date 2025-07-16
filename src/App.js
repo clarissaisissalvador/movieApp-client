@@ -29,7 +29,7 @@ function unsetUser(){
     localStorage.clear();
   };
   useEffect(()=> {
-      fetch('https://fitnessapi-salvador-pj5e.onrender.com/users/details', {
+      fetch('http://localhost:4000/users/details', {
         headers : {
           Authorization: `Bearer ${localStorage.getItem("token")}`
         }

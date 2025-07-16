@@ -1,28 +1,18 @@
 import { Link } from 'react-router-dom';
-
-// css
-import '../index.css'
+import '../index.css';
 
 export default function LandingSection() {
   return (
-    <>
-<section className="landing-hero">
-  <div className="overlay-content">
-    <div className="d-flex">
-      <h1 className="titles text-start">Binge. Discover. Repeat.</h1>
-    </div>
+    <section className="landing-hero p-5">
+      <div className="container">
+        {/* Title aligned to the left */}
+        <h1 className="titles text-start mb-4">Discover. Share. Binge.</h1>
 
-    <div className="d-flex justify-content-center gap-3 mt-5">
-      <Link className="btn" id="btn1" to="/products"></Link>
-      <Link className="btn" id="btn2" to="/register">Sign Up to Stream Now!</Link>
-    </div>
-  </div>
-</section>
-
-
-
-
-    </>
-
-  )
+        {/* Buttons aligned left, stacked on small screens, side-by-side on md+ */}
+        <div className="d-flex flex-column flex-md-row align-items-start gap-3 mt-3">
+          <Link className="btn" id="btn2" to="/register">Join Now!</Link>
+        </div>
+      </div>
+    </section>
+  );
 }

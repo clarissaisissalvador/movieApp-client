@@ -21,7 +21,7 @@ export default function Login() {
 
 	function authenticate(e) {
 		e.preventDefault();
-		fetch('https://fitnessapi-salvador-pj5e.onrender.com/users/login', {
+		fetch('http://localhost:4000/users/login', {
 			method: 'POST',
 			headers: {
 				"Content-Type": "application/json"
@@ -59,7 +59,7 @@ export default function Login() {
 	}
 
 	function retrieveUserDetails(token){
-		fetch('https://fitnessapi-salvador-pj5e.onrender.com/users/details', {
+		fetch('http://localhost:4000/users/details', {
 			headers : {
 				Authorization : `Bearer ${token}`
 			}
@@ -84,12 +84,12 @@ export default function Login() {
 	return (
 		<Row className="justify-content-center px-3" id="login">
 		<Col xs={12} sm={12} md={10} lg={8} xl={6} className="pt-5 mt-5">
-		<div className="p-4 border w-100 mx-auto mt-5 pt-5">
+		<div className="p-4 w-100 mx-auto mt-4 pt-3 mb-5 pb-5 my-5">
 		<Form onSubmit={(e) => authenticate(e)} id="loginForm">
-		<h1 className="mb-4 text-center text-white">Login</h1>
+		<h1 className="mb-4 text-center title-red">Login</h1>
 
 		<Form.Group className="mb-3">
-		<Form.Label>Email address</Form.Label>
+		<Form.Label className="text-white">Email address</Form.Label>
 		<Form.Control
 		type="email"
 		placeholder="Enter email"
@@ -100,7 +100,7 @@ export default function Login() {
 		</Form.Group>
 
 		<Form.Group className="mb-3">
-		<Form.Label>Password</Form.Label>
+		<Form.Label className="text-white">Password</Form.Label>
 		<Form.Control
 		type="password"
 		placeholder="Password"
@@ -110,15 +110,15 @@ export default function Login() {
 		/>
 		</Form.Group>
 
-		<p className="text-center small">Don't have an Account? <Link to="/register" className="text-decoration-none signup">Sign Up</Link></p>
+		<p className="text-center small text-white">Don't have an Account? <Link to="/register" className="text-decoration-none signup">Sign Up</Link></p>
 
 		<div className="d-flex justify-content-center pt-3">
 		{ isActive ? 
-			<Button className="ps-5 pe-5 text-center" type="submit" id="loginBtn1">
+			<Button className="w-50 text-center" type="submit" id="loginBtn1">
 			Login
 			</Button>
 			: 
-			<Button className="ps-5 pe-5 text-center"type="submit" id="loginBtn2" disabled>
+			<Button className="w-50 text-center"type="submit" id="loginBtn2" disabled>
 			Login
 			</Button>
 		}

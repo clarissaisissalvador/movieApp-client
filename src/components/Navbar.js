@@ -14,7 +14,7 @@ export default function Navigation(){
 		<section>
 			<Navbar expand="lg" className="custom-navbar fixed-top shadow">
 				<Container>
-					<Navbar.Brand href="#home" className="fw-bold text-white">Streamverse</Navbar.Brand>
+					<Navbar.Brand href="#home" className="fw-bold text-white">ScreenTalks</Navbar.Brand>
 					<Navbar.Toggle aria-controls="navbar-nav" />
 					<Navbar.Collapse id="navbar-nav" className="w-100">
 						<Nav className="ms-auto gap-5">
@@ -22,7 +22,7 @@ export default function Navigation(){
 						{user.id !== null
 							? 
 							<>
-							<Nav.Link as={Link} to="/workouts" className="text-white">Movies</Nav.Link>
+							<Nav.Link as={Link} to="/movies" className="text-white">Movies</Nav.Link>
 							<Nav.Link as={Link} to="/logout" className="text-white">Logout</Nav.Link>
 							</>
 							:

@@ -39,7 +39,7 @@ export default function Register() {
 
 		e.preventDefault();
 
-		fetch('https://fitnessapi-salvador-pj5e.onrender.com/users/register',{
+		fetch('http://localhost:4000/users/register',{
 
 		method: 'POST',
 		headers: {
@@ -86,15 +86,15 @@ export default function Register() {
     return (
     		<div id="register">
     		<section className="d-flex justify-content-center container">
-			  <Col md={6} className="p-4 border form-p w-75">
+			  <Col md={6} className="p-4 form-p w-75 mb-2 pb-2">
 			    <Form id="form-register" className="py-4" onSubmit={(e) => registerUser(e)}>
-			    <div className="mt-3 text-center mb-5 text-white">
-			      <h1>Sign Up</h1>
-			      <p>Please fill in your details to create your account</p>
+			    <div className="mt-3 text-center mb-5">
+			      <h1 className="title-red">Sign Up</h1>
+			      <p className="text-white">Please fill in your details to create your account</p>
 			     </div>
 
 			      <Form.Group className="mb-3">
-			        <Form.Label>Email:</Form.Label>
+			        <Form.Label className="text-white">Email:</Form.Label>
 			        <Form.Control
 			          type="email"
 			          placeholder="Email"
@@ -107,7 +107,7 @@ export default function Register() {
 			     <Row className="mb-3">
 			        <Col md={6}>
 			      <Form.Group className="mb-3">
-			        <Form.Label>Password</Form.Label>
+			        <Form.Label className="text-white">Password</Form.Label>
 			        <Form.Control
 			          type="password"
 			          placeholder="Password"
@@ -120,7 +120,7 @@ export default function Register() {
 
 				<Col md={6}>
 			      <Form.Group className="mb-3">
-			        <Form.Label>Confirm Password</Form.Label>
+			        <Form.Label className="text-white">Confirm Password</Form.Label>
 			        <Form.Control
 			          type="password"
 			          placeholder="Confirm Password"
@@ -134,7 +134,7 @@ export default function Register() {
 
 				<div className="d-flex justify-content-center pt-3">
 			      {isActive ? 
-			        <Button type="submit" id="submitBtn2" className="w-100">
+			        <Button type="submit" id="submitBtn2" className="w-50">
 			          Sign Up
 			        </Button>
 			       : 
