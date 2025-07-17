@@ -49,7 +49,7 @@ export default function Footer(){
     {/* Bottom Row */}
 <Row className="px-5 pb-3">
 	<Col className="text-muted small text-center">
-	© 2025 Streamverse. All rights reserved.
+	© 2025 ScreenTalks. All rights reserved.
 </Col>
 </Row>
 </Container>
