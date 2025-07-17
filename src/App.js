@@ -29,7 +29,7 @@ function unsetUser(){
     localStorage.clear();
   };
   useEffect(()=> {
-      fetch('http://localhost:4000/users/details', {
+      fetch('https://movieapi-salvador-20n7.onrender.com/users/details', {
         headers : {
           Authorization: `Bearer ${localStorage.getItem("token")}`
         }

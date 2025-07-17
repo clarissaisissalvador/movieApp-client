@@ -21,7 +21,7 @@ export default function Login() {
 
 	function authenticate(e) {
 		e.preventDefault();
-		fetch('http://localhost:4000/users/login', {
+		fetch('https://movieapi-salvador-20n7.onrender.com/users/login', {
 			method: 'POST',
 			headers: {
 				"Content-Type": "application/json"
@@ -59,7 +59,7 @@ export default function Login() {
 	}
 
 	function retrieveUserDetails(token){
-		fetch('http://localhost:4000/users/details', {
+		fetch('https://movieapi-salvador-20n7.onrender.com/users/details', {
 			headers : {
 				Authorization : `Bearer ${token}`
 			}
